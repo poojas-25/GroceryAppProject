@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-04-24T18:06:07 IST" name="Default suite" finished-at="2025-04-24T18:06:10 IST" duration-ms="3522">
+    <groups>
+    </groups>
+    <test started-at="2025-04-24T18:06:07 IST" name="Default test" finished-at="2025-04-24T18:06:10 IST" duration-ms="3522">
+      <class name="testScript.ManageFooterText_Test">
+        <test-method is-config="true" signature="initializeBrowser()[pri:0, instance:testScript.ManageFooterText_Test@5656be13]" started-at="2025-04-24T18:06:07 IST" name="initializeBrowser" finished-at="2025-04-24T18:06:08 IST" duration-ms="1485" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeBrowser -->
+        <test-method signature="verifyUpdatingManageFooterText()[pri:0, instance:testScript.ManageFooterText_Test@5656be13]" started-at="2025-04-24T18:06:08 IST" name="verifyUpdatingManageFooterText" finished-at="2025-04-24T18:06:10 IST" duration-ms="1934" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUpdatingManageFooterText -->
+        <test-method is-config="true" signature="driverQuitMethod(org.testng.ITestResult)[pri:0, instance:testScript.ManageFooterText_Test@5656be13]" started-at="2025-04-24T18:06:10 IST" name="driverQuitMethod" finished-at="2025-04-24T18:06:10 IST" duration-ms="78" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyUpdatingManageFooterText status=SUCCESS method=ManageFooterText_Test.verifyUpdatingManageFooterText()[pri:0, instance:testScript.ManageFooterText_Test@5656be13] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverQuitMethod -->
+      </class> <!-- testScript.ManageFooterText_Test -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

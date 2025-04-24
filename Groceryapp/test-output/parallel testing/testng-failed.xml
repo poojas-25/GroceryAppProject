@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [parallel testing]">
+  <test thread-count="2" parallel="tests" name="mytest(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="testScript.SubCategory_Test">
+        <methods>
+          <include name="initializeBrowserMethod"/>
+          <include name="verifyEditingASubcategoryAdded"/>
+          <include name="driverQuitMethod"/>
+        </methods>
+      </class> <!-- testScript.SubCategory_Test -->
+    </classes>
+  </test> <!-- mytest(failed) -->
+</suite> <!-- Failed suite [parallel testing] -->

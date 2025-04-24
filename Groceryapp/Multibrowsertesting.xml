@@ -1,0 +1,24 @@
+<suite name="multibrowser testing" parallel="tests" thread-count="2">
+
+	<test name="Chrometest" thread-count="5">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class name="testScript.SubCategory_Test">
+				<methods>
+					<include name="verifySearchingSubcategoryFromTheList"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+	<test name="Edgetest" thread-count="5">
+		<parameter name="browser" value="Edge" />
+		<classes>
+			<class name="testScript.SubCategory_Test"></class>
+			<methods>
+				<include name="verifySearchingSubcategoryFromTheList"></include>
+			</methods>
+		</classes>
+	</test>
+
+</suite>

@@ -1,0 +1,9 @@
+<suite name = "myTestSuite">
+<test name = "myTest">
+<parameter name = "Parameter1" value = "https://demo.guru99.com/selenium/upload/"></parameter>
+<parameter name = "Parameter2" value = "///home/hp/Documents/test upload.odt"></parameter>
+<classes>
+<class name = "utilities.FileUploadUtility"></class>
+</classes>
+</test>
+</suite>
