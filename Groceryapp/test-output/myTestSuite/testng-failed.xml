@@ -8,13 +8,13 @@
   </listeners>
   <test thread-count="5" name="myTest(failed)">
     <classes>
-      <class name="testScript.SubCategory_Test">
+      <class name="testScript.Admin_Users">
         <methods>
-          <include name="verifyEditingASubcategoryAdded"/>
-          <include name="initializeBrowser"/>
+          <include name="initializeBrowserMethod"/>
           <include name="driverQuitMethod"/>
+          <include name="verifyAddingNewUserWithValidDetails"/>
         </methods>
-      </class> <!-- testScript.SubCategory_Test -->
+      </class> <!-- testScript.Admin_Users -->
     </classes>
   </test> <!-- myTest(failed) -->
 </suite> <!-- Failed suite [myTestSuite] -->

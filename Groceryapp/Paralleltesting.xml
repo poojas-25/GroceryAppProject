@@ -18,7 +18,7 @@
 		<classes>
 			<class name="testScript.SubCategory_Test"></class>
 			<methods>
-				<include name="verifySearchingSubcategoryFromTheList"></include>
+				<include name="verifyAddingNewSubcategoryWithValidDetails"></include>
 			</methods>
 		</classes>
 	</test>

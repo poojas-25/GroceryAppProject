@@ -9,6 +9,12 @@
 		<classes>
 			<class name="testScript.Login_Test"></class>
 			<class name="testScript.SubCategory_Test"></class>
+			<class name="testScript.ManageFooterText_Test"></class>
+			<class name="testScript.ManageContact_Test"></class>
+			<class name="testScript.ManageCategory_Test"></class>
+			<class name="testScript.Admin_Users"></class>
+			<class name="testScript.Log_Out"></class>
+			
 		</classes>
 	</test>
 </suite>

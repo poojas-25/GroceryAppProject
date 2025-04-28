@@ -1,0 +1,9 @@
+<suite name = "myTestSuite">
+<test name = "myTest">
+<groups>
+<run>
+<include name = "smoke"></include>
+</run>
+</groups>
+</test>
+</suite>

@@ -6,8 +6,8 @@
     <classes>
       <class name="testScript.SubCategory_Test">
         <methods>
-          <include name="initializeBrowserMethod"/>
           <include name="verifyEditingASubcategoryAdded"/>
+          <include name="initializeBrowser"/>
           <include name="driverQuitMethod"/>
         </methods>
       </class> <!-- testScript.SubCategory_Test -->

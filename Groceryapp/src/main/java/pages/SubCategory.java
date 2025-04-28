@@ -2,7 +2,6 @@ package pages;
 
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -32,7 +31,8 @@ public class SubCategory {
 	@FindBy(xpath = "//input[@id='main_img']")WebElement chooseFile;
 	@FindBy(xpath = "//button[@type='submit']")WebElement saveButton;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")WebElement successAlert;
-	@FindBy(xpath = "//a[@href='https://groceryapp.uniqassosiates.com/admin/Subcategory/edit?edit=3452&page_ad=1']")WebElement editButton;
+	@FindBy(xpath = "//a[@class='btn btn-sm btn btn-primary btncss']")WebElement editButton;
+	@FindBy(xpath = "//span[@class='fas fa-trash-alt']")WebElement deleteImage;
 	@FindBy(xpath = "//button[@name='update']")WebElement updateButton;
 	@FindBy(xpath = "//div[@class='alert alert-success alert-dismissible']")WebElement updateAlert;
 	@FindBy(xpath = "//a[@class='btn btn-rounded btn-primary']")WebElement searchButton;
@@ -57,7 +57,7 @@ public class SubCategory {
 	}
 	
 	public SubCategory uploadImage() {
-		String path = constants.IMAGEUPLOAD;
+		String path = Constants.IMAGEUPLOAD;
 		upload.fileUploadUsingSendKeys(chooseFile, path);
 		return this;
 	}
@@ -75,12 +75,20 @@ public class SubCategory {
 		editButton.click();
 		page.selectDropdownByVisibleText(categoryDropdown, "veggies");
 		subcategoryField.clear();
-		subcategoryField.sendKeys("Potatoes"+page.generateCurrentDateAndTime());
+		subcategoryField.sendKeys("AAPotatoes"+page.generateCurrentDateAndTime());
+		return this;
+	}
+	
+	public SubCategory updateSubcategoryImage() {
+		page.confrimationAlertOkButton(deleteImage, driver);
+		String imagepath = Constants.EDITIMAGEUPLOAD;
+		upload.fileUploadUsingSendKeys(chooseFile, imagepath);
 		return this;
 	}
 	
 	public SubCategory clickUpdateSubcategory() {
-		updateButton.click();
+		waitutility.implicitWait(driver);
+		page.clickJavaScriptExecutor(updateButton, driver);
 		return this;
 	}
 	
@@ -94,12 +102,12 @@ public class SubCategory {
 	}
 	
 	public SubCategory selectCategoryToBeSearched() {
-		page.selectDropdownByVisibleText(searchCategory, "Vegetables");
+		page.selectDropdownByVisibleText(searchCategory, "veggies");
 		return this;
 	}
 	
 	public SubCategory enterSubcategoryToBeSearched() {
-		searchSubcategoryField.sendKeys("Carrots"); //current date and time will get added to the subcategory name so that it will be unique
+		searchSubcategoryField.sendKeys("AAPotatoes"); //current date and time will get added to the subcategory name so that it will be unique
 		return this;
 	}
 	
@@ -129,7 +137,7 @@ public class SubCategory {
 	}
 	
 	public boolean verifySubcatergorySearchResult() {
-		String element = "Carrots";
+		String element = "AAPotatoes";
 		boolean result = verifySearchResult(element, tableSearch);
 		return result;
 	}

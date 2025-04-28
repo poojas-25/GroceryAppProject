@@ -21,10 +21,6 @@ public class HomePage {
 	@FindBy(xpath = "//div[@class='small-box bg-info']//parent::a[@href=\"https://groceryapp.uniqassosiates.com/admin/list-admin\"]")WebElement adminUsers;
 	@FindBy(xpath = "/html/body/div/div[1]/section/div/div/div[11]/div/a")WebElement manageCategory;
 	
-	/*public void navigateToSubcategory() {
-		subcategoryPage.click();
-	}*/
-	
 	public SubCategory navigateToSubcategory() {
 		subcategoryPage.click();
 		return new SubCategory(driver);

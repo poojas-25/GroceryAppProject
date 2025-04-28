@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.SubCategory;
@@ -25,7 +26,7 @@ public class SubCategory_Test extends BaseClass {
 				.clickSaveButton();
 
 		boolean isAlertDisplayed = subcategory.isAlertDisplayed();
-		Assert.assertTrue(isAlertDisplayed, "Subcategory is not added successfully");
+		Assert.assertTrue(isAlertDisplayed, Constants.SC_VERIFYADDINGNEWSUBCATEGORYUSINGVALIDDETAILS);
 	}
 
 	@Test
@@ -33,10 +34,10 @@ public class SubCategory_Test extends BaseClass {
 		LoginPage login = new LoginPage(driver);
 
 		home = login.loginUsingExcelData();
-		subcategory = home.navigateToSubcategory().editSubcategory().clickUpdateSubcategory();
+		subcategory = home.navigateToSubcategory().editSubcategory().updateSubcategoryImage().clickUpdateSubcategory();
 
 		boolean isUpdateAlertDisplayed = subcategory.isUpdateAlertDisplayed();
-		Assert.assertTrue(isUpdateAlertDisplayed, "Subcategory is not updated successfully");
+		Assert.assertTrue(isUpdateAlertDisplayed, Constants.SC_VERIFYEDITINGSUBCATEGORYADDED);
 
 	}
 
@@ -49,6 +50,6 @@ public class SubCategory_Test extends BaseClass {
 				.enterSubcategoryToBeSearched().searchSubcatogryEntered();
 
 		boolean verifySearchResult = subcategory.verifySubcatergorySearchResult();
-		Assert.assertTrue(verifySearchResult, "Search result not found message is displayed");
+		Assert.assertTrue(verifySearchResult, Constants.SC_VERIFYSEARCHINGEXISTINGSUBCATEGORYFROMTHELIST);
 	}
 }

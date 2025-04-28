@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageContact;
@@ -16,7 +17,7 @@ public class ManageContact_Test extends BaseClass {
 	ManageContact contact;
 
 	@Test
-	public void verifyEditingContact() throws IOException {
+	public void verifyEditingExistingContact() throws IOException {
 
 		LoginPage login = new LoginPage(driver);
 
@@ -25,6 +26,6 @@ public class ManageContact_Test extends BaseClass {
 				.clickUpdateButton();
 
 		boolean isUpdateSuccessfulAlertDisplayed = contact.isUpdateSuccessfulAlertDisplayed();
-		Assert.assertTrue(isUpdateSuccessfulAlertDisplayed, "Updating contact was not successful");
+		Assert.assertTrue(isUpdateSuccessfulAlertDisplayed,Constants.MCONT_VERIFYEDITINGEXISTINGCONTACT );
 	}
 }

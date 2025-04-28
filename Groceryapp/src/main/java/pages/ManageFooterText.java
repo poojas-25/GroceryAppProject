@@ -45,9 +45,6 @@ public class ManageFooterText {
 	}
 	
 	public ManageFooterText addRequiredValuesFromExcelSheet() throws IOException {
-		//String address = ExcelUtility.getIntegerData(1, 0, "Manage_FooterText");
-		//String emailId = ExcelUtility.getIntegerData(1, 1, "Manage_FooterText");
-		//String phoneNumber = ExcelUtility.getIntegerData(1, 2, "Manage_FooterText");
 		
 		String address = ExcelUtility.getStringData(1, 0, "Manage_FooterText");
 		String emailId = ExcelUtility.getStringData(1, 1, "Manage_FooterText");

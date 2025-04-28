@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageFooterText;
@@ -23,6 +24,6 @@ public class ManageFooterText_Test extends BaseClass {
 				.addRequiredValuesFromExcelSheet().clickUpdateButton();
 
 		boolean isSuccessfulAlertDisplayed = footer.isUpdateSuccessfulAlertDisplayed();
-		Assert.assertTrue(isSuccessfulAlertDisplayed, "Update was not successful");
+		Assert.assertTrue(isSuccessfulAlertDisplayed, Constants.MFT_VERIFYUPDATINGMANAGEFOOTERTEXT);
 	}
 }

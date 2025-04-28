@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.AdminUsers;
 import pages.HomePage;
 import pages.LoginPage;
@@ -23,6 +24,6 @@ public class Admin_Users extends BaseClass {
 				.enterValuesInTheFieldsForUserCreation().clickSaveButton();
 
 		boolean isUserAddedAlertDisplayed = admin.isUserCreatedAlertDisplayed();
-		Assert.assertTrue(isUserAddedAlertDisplayed, "User not created successfully");
+		Assert.assertTrue(isUserAddedAlertDisplayed, Constants.AU_VERIFYADDINGNEWUSERWITHVALIDDETAILS );
 	}
 }

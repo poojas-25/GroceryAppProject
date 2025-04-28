@@ -9,9 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 
 import constants.Constants;
 import utilities.ExcelUtility;
-import utilities.FakerUtility;
 import utilities.FileUploadUtility;
 import utilities.PageUtilities;
+import utilities.WaitUtilities;
 
 public class ManageCategory {
 
@@ -19,6 +19,7 @@ public class ManageCategory {
 	FileUploadUtility upload = new FileUploadUtility();
 	Constants constants = new Constants();
 	ExcelUtility excelutility = new ExcelUtility();
+	WaitUtilities waitutility = new WaitUtilities();
 	WebDriver driver;
 	
 	public ManageCategory(WebDriver driver) {
@@ -45,9 +46,9 @@ public class ManageCategory {
 	}
 	
 	public ManageCategory enterValuesForAddingNewCategory() {
-		enterCategory.sendKeys("Automation_Category");
+		enterCategory.sendKeys("Automation_Category"+page.generateCurrentDateAndTime());
 		selectGroup.click();
-		String path = constants.CATEGORYIMAGE;
+		String path = Constants.CATEGORYIMAGE;
 		upload.fileUploadUsingSendKeys(chooseImage, path);
 		return this;
 	}
@@ -61,52 +62,9 @@ public class ManageCategory {
 		return successfulAlert.isDisplayed();
 	}
 	
-	public ManageCategory clickSearchButton() {
-		searchButton.click();
-		return this;
-	}
-	
-	public ManageCategory searchRequiredCategory() {
-		enterSategoryToBeSearched.sendKeys("Automation_Category");
-		FinalsearchButton.click();
-		return this;
-	}
-	
-	public boolean verifySearchResult(String element , List<WebElement> list) {
-		int flag = 0;
-		for(WebElement searchResult : list)
-		{
-			if(searchResult.getText().equals(element))
-			{
-				System.out.println(searchResult.getText());
-				flag=1;
-				break;
-			}
-		}
-		if(flag==1)
-		{
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
-	
-	public boolean verifyCatergorySearchResult() {
-		String element = "Automation_Category";
-		boolean result = verifySearchResult(element, tableSearch);
-		return result;
-	}
-	
 	public ManageCategory deleteCategoryAdded() {
-		if(this.verifyCatergorySearchResult()==true) {
-			page.confrimationAlertOkButton(deleteButton, driver);
-		}
-		else
-		{
-			System.out.println("Category searched is not found");
-		}
-		
+		page.confrimationAlertOkButton(deleteButton, driver);
+		waitutility.implicitWait(driver);
 		return this;
 	}
 	

@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import pages.HomePage;
+import constants.Constants;
 import pages.LogOut;
 import pages.LoginPage;
 
@@ -18,6 +18,6 @@ public class Log_Out extends BaseClass{
 	  LogOut logout = new LogOut(driver);
 	  logout.logoutFromTheApplication();
 	  boolean isLogoutSuccessful = logout.isLoginButtonDisplayed();
-	  Assert.assertTrue(isLogoutSuccessful, "Logout was not successful");
+	  Assert.assertTrue(isLogoutSuccessful, Constants.LO_VERIFYLOGOUTFUNCTION);
   }
 }

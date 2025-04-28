@@ -37,9 +37,6 @@ public class LoginPage {
 		passwordfield.sendKeys(password);
 	}
 
-	/*public void clickLoginButton() {
-		signinbutton.click();
-	}*/
 	public HomePage clickLoginButton() {
 		signinbutton.click();
 		return new HomePage(driver);

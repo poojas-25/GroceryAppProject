@@ -5,10 +5,10 @@ import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constants.Constants;
 import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageCategory;
-import pages.ManageContact;
 
 public class ManageCategory_Test extends BaseClass {
 	LoginPage login;
@@ -23,18 +23,15 @@ public class ManageCategory_Test extends BaseClass {
 				.clickSaveButton();
 
 		boolean isAlertSuccessfulDisplayed = category.isSuccessfulAlertDisplayed();
-		Assert.assertTrue(isAlertSuccessfulDisplayed, "Not able to add a new category");
+		Assert.assertTrue(isAlertSuccessfulDisplayed, Constants.MC_VERIFYADDINGANEWCATEGORY);
 	}
 
-	@Test
-	public void verifyDeletingACategoryAddedAfterSearching() throws IOException {
+	@Test(enabled=true)
+	public void verifyDeletingACategoryAdded() throws IOException {
 		LoginPage login = new LoginPage(driver);
 		home = login.loginUsingExcelData();
-		category = home.navigateToManageCategory().clickSearchButton();
-		//category.clickSearchButton();
-		category.verifyCatergorySearchResult();
-		category.deleteCategoryAdded();
+		category = home.navigateToManageCategory().deleteCategoryAdded();
 		boolean isDeleteSuccessfulAlertDisplayed = category.isDeleteSuccessfulAlertDisplayed();
-		Assert.assertTrue(isDeleteSuccessfulAlertDisplayed, "Not able to delete the category added");
+		Assert.assertTrue(isDeleteSuccessfulAlertDisplayed, Constants.MC_VERIFYDELETINGACATEGORYADDEDAFTERSEARCHING);
 	}
 }
