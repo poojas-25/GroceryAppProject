@@ -38,4 +38,8 @@ public class FakerUtility {
 	public String generateRandomPIN() {
 		return faker.address().zipCode();
 	}
+	
+	public String generateRandomUsername() {
+		return faker.name().username();
+	}
 }

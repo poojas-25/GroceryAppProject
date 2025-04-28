@@ -11,7 +11,7 @@ import constants.Constants;
 import pages.LoginPage;
 
 public class Login_Test extends BaseClass {
-  @Test
+  @Test(groups ="smoke")
   public void loginUsingValidCredentials() {
 	  LoginPage obj = new LoginPage(driver);
 	  obj.enterUsernameOnUsernameField("admin");
@@ -58,7 +58,7 @@ public class Login_Test extends BaseClass {
 	  return new Object[][] {{"adim123","admintest"},{"testuser","testpassword"}};
   }
   
-  @Test
+  @Test(groups ="smoke")
   public void loginUsingValidCredentialsFromExcelsheet() throws IOException {  //getting data from excel sheet
 	  LoginPage obj = new LoginPage(driver);
 	  obj.loginUsingExcelData();

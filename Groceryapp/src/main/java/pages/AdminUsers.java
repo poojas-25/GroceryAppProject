@@ -8,12 +8,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utilities.ExcelUtility;
+import utilities.FakerUtility;
 import utilities.PageUtilities;
 
 public class AdminUsers {
 
 	PageUtilities page = new PageUtilities();
 	ExcelUtility excealread = new ExcelUtility();
+	FakerUtility faker = new FakerUtility();
 	WebDriver driver;
 
 	public AdminUsers(WebDriver driver) {
@@ -46,9 +48,8 @@ public class AdminUsers {
 	}
 
 	public AdminUsers enterValuesInTheFieldsForUserCreation() throws IOException {
-		String username = ExcelUtility.getStringData(1, 0, "Admin_User");
 		String password = ExcelUtility.getStringData(1, 1, "Admin_User");
-		enterUsername.sendKeys(username);
+		enterUsername.sendKeys(faker.generateRandomUsername());
 		enterPassword.sendKeys(password);
 		page.selectDropdownByVisibleText(userTypeDropdown, "Admin");
 		return this;

@@ -5,5 +5,13 @@
 <include name = "smoke"></include>
 </run>
 </groups>
+<parameter name="browser" value="Chrome" >
+		</parameter>
+<classes>
+<class name="testScript.ManageCategory_Test">
+</class>
+<class name="testScript.Login_Test">
+</class>
+</classes>
 </test>
 </suite>

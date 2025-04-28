@@ -1,6 +1,6 @@
 <suite name="parallel testing" parallel="tests" thread-count="2">
 
-	<test name="mytest" thread-count="5">
+	<test name="mytest" thread-count="5">  
 		<parameter name="browser" value="Chrome" >
 		</parameter>
 		<classes>

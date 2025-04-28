@@ -15,7 +15,7 @@ public class ManageCategory_Test extends BaseClass {
 	HomePage home;
 	ManageCategory category;
 
-	@Test
+	@Test(groups ="smoke")
 	public void verifyAddingAnewCategory() throws IOException {
 		LoginPage login = new LoginPage(driver);
 		home = login.loginUsingExcelData();
