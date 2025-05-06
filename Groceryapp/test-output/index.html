@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-myTestSuite" class="navigator-link">
-              <span class="suite-name border-passed">myTestSuite</span>
+              <span class="suite-name border-skipped">myTestSuite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,7 +92,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">15 methods,   15 passed</span>
+                    <span class="method-stats">17 methods,  2 skipped,  15 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Retried methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-myTestSuite" class="hide-methods skipped suite-myTestSuite"> (hide)</a> <!-- hide-methods skipped suite-myTestSuite -->
+                      <a href="#" panel-name="suite-myTestSuite" class="show-methods skipped suite-myTestSuite"> (show)</a> <!-- show-methods skipped suite-myTestSuite -->
+                    </span>
+                    <div class="method-list-content skipped suite-myTestSuite">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-myTestSuite" title="testScript.SubCategory_Test" class="method navigator-link" hash-for-method="verifySearchingExistingSubcategoryFromTheList">verifySearchingExistingSubcategoryFromTheList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-myTestSuite" title="testScript.SubCategory_Test" class="method navigator-link" hash-for-method="verifySearchingExistingSubcategoryFromTheList">verifySearchingExistingSubcategoryFromTheList</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-myTestSuite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -148,12 +167,12 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-myTestSuite" title="testScript.Login_Test" class="method navigator-link" hash-for-method="verifyLoginWithInvalidCredentials(adim123, admintest)">verifyLoginWithInvalidCredentials(adim123, admintest)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-myTestSuite" title="testScript.Login_Test" class="method navigator-link" hash-for-method="verifyLoginWithInvalidCredentials(testuser, testpassword)">verifyLoginWithInvalidCredentials(testuser, testpassword)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-myTestSuite" title="testScript.Login_Test" class="method navigator-link" hash-for-method="verifyLoginWithInvalidCredentials(testuser, testpassword)">verifyLoginWithInvalidCredentials(testuser, testpassword)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-myTestSuite" title="testScript.Login_Test" class="method navigator-link" hash-for-method="verifyLoginWithInvalidCredentials(adim123, admintest)">verifyLoginWithInvalidCredentials(adim123, admintest)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -188,6 +207,78 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-myTestSuite" class="panel myTestSuite">
+          <div class="suite-myTestSuite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">testScript.SubCategory_Test</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchingExistingSubcategoryFromTheList">
+                  </a> <!-- verifySearchingExistingSubcategoryFromTheList -->
+                  <span class="method-name">verifySearchingExistingSubcategoryFromTheList</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=134.0.6998.88)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.8.0-58-generic&apos;, java.version: &apos;17.0.14&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fcab0ac14c592665d641c405010a1ecf, getElementText {id=f.6BA3D2C736822BC749FADEE44BD190CF.d.B45E5184FFB3F255305F95C5ACEDF857.e.567}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.88, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:43519}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:43519/devtoo..., se:cdpVersion: 134.0.6998.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (fcab0ac14c592665d641c405010a1ecf)] -&gt; xpath: //table[@class=&apos;table table-bordered table-hover table-sm&apos;]//tbody//tr//td[1]]
+Session ID: fcab0ac14c592665d641c405010a1ecf
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+	at pages.SubCategory.verifySearchResult(SubCategory.java:123)
+	at pages.SubCategory.verifySubcatergorySearchResult(SubCategory.java:141)
+	at testScript.SubCategory_Test.verifySearchingExistingSubcategoryFromTheList(SubCategory_Test.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySearchingExistingSubcategoryFromTheList">
+                  </a> <!-- verifySearchingExistingSubcategoryFromTheList -->
+                  <span class="method-name">verifySearchingExistingSubcategoryFromTheList</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
+  (Session info: chrome=134.0.6998.88)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
+Build info: version: &apos;4.29.0&apos;, revision: &apos;5fc1ec94cb&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.8.0-58-generic&apos;, java.version: &apos;17.0.14&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8b5980c7c9b7722e6ddb38f05d1bcbcf, getElementText {id=f.40E8632A19160965CADDCD59038C3D5A.d.A4802C0FDED5000C03AD7FE3C9F8D81B.e.509}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 134.0.6998.88, chrome: {chromedriverVersion: 134.0.6998.165 (fd886e2cb29..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:36621}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:36621/devtoo..., se:cdpVersion: 134.0.6998.88, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (8b5980c7c9b7722e6ddb38f05d1bcbcf)] -&gt; xpath: //table[@class=&apos;table table-bordered table-hover table-sm&apos;]//tbody//tr//td[1]]
+Session ID: 8b5980c7c9b7722e6ddb38f05d1bcbcf
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:191)
+	at pages.SubCategory.verifySearchResult(SubCategory.java:123)
+	at pages.SubCategory.verifySubcatergorySearchResult(SubCategory.java:141)
+	at testScript.SubCategory_Test.verifySearchingExistingSubcategoryFromTheList(SubCategory_Test.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-myTestSuite-class-skipped -->
           <div class="suite-myTestSuite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -261,18 +352,18 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="verifyLoginWithInvalidCredentials(adim123, admintest)">
-                  </a> <!-- verifyLoginWithInvalidCredentials(adim123, admintest) -->
-                  <span class="method-name">verifyLoginWithInvalidCredentials</span>
-                  <span class="parameters">(adim123,admintest)</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="verifyLoginWithInvalidCredentials(testuser, testpassword)">
                   </a> <!-- verifyLoginWithInvalidCredentials(testuser, testpassword) -->
                   <span class="method-name">verifyLoginWithInvalidCredentials</span>
                   <span class="parameters">(testuser,testpassword)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyLoginWithInvalidCredentials(adim123, admintest)">
+                  </a> <!-- verifyLoginWithInvalidCredentials(adim123, admintest) -->
+                  <span class="method-name">verifyLoginWithInvalidCredentials</span>
+                  <span class="parameters">(adim123,admintest)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -430,72 +521,80 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(15);
+data.addRows(17);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyAddingNewSubcategoryWithValidDetails')
+data.setCell(0, 1, 'verifyEditingASubcategoryAdded')
 data.setCell(0, 2, 'testScript.SubCategory_Test')
-data.setCell(0, 3, 2589);
+data.setCell(0, 3, 2474);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyUpdatingManageFooterText')
-data.setCell(1, 2, 'testScript.ManageFooterText_Test')
-data.setCell(1, 3, 2586);
+data.setCell(1, 1, 'verifyEditingExistingContact')
+data.setCell(1, 2, 'testScript.ManageContact_Test')
+data.setCell(1, 3, 2061);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyAddingAnewCategory')
 data.setCell(2, 2, 'testScript.ManageCategory_Test')
-data.setCell(2, 3, 2540);
+data.setCell(2, 3, 1626);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyEditingExistingContact')
-data.setCell(3, 2, 'testScript.ManageContact_Test')
-data.setCell(3, 3, 2398);
+data.setCell(3, 1, 'verifyAddingNewSubcategoryWithValidDetails')
+data.setCell(3, 2, 'testScript.SubCategory_Test')
+data.setCell(3, 3, 1622);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'verifyEditingASubcategoryAdded')
+data.setCell(4, 1, 'verifySearchingExistingSubcategoryFromTheList')
 data.setCell(4, 2, 'testScript.SubCategory_Test')
-data.setCell(4, 3, 2244);
+data.setCell(4, 3, 1566);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'verifyAddingNewUserWithValidDetails')
-data.setCell(5, 2, 'testScript.Admin_Users')
-data.setCell(5, 3, 1582);
+data.setCell(5, 1, 'verifySearchingExistingSubcategoryFromTheList')
+data.setCell(5, 2, 'testScript.SubCategory_Test')
+data.setCell(5, 3, 1538);
 data.setCell(6, 0, 6)
 data.setCell(6, 1, 'verifySearchingExistingSubcategoryFromTheList')
 data.setCell(6, 2, 'testScript.SubCategory_Test')
-data.setCell(6, 3, 1380);
+data.setCell(6, 3, 1530);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'verifyLogoutFunction')
-data.setCell(7, 2, 'testScript.Log_Out')
-data.setCell(7, 3, 1240);
+data.setCell(7, 1, 'verifyUpdatingManageFooterText')
+data.setCell(7, 2, 'testScript.ManageFooterText_Test')
+data.setCell(7, 3, 1439);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'verifyDeletingACategoryAdded')
-data.setCell(8, 2, 'testScript.ManageCategory_Test')
-data.setCell(8, 3, 1110);
+data.setCell(8, 1, 'verifyAddingNewUserWithValidDetails')
+data.setCell(8, 2, 'testScript.Admin_Users')
+data.setCell(8, 3, 1374);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'loginUsingValidCredentialsFromExcelsheet')
-data.setCell(9, 2, 'testScript.Login_Test')
-data.setCell(9, 3, 832);
+data.setCell(9, 1, 'verifyDeletingACategoryAdded')
+data.setCell(9, 2, 'testScript.ManageCategory_Test')
+data.setCell(9, 3, 1102);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'loginUsingValidCredentials')
+data.setCell(10, 1, 'loginUsingValidCredentialsFromExcelsheet')
 data.setCell(10, 2, 'testScript.Login_Test')
-data.setCell(10, 3, 548);
+data.setCell(10, 3, 812);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'verifyLoginWithInvalidCredentials')
-data.setCell(11, 2, 'testScript.Login_Test')
-data.setCell(11, 3, 377);
+data.setCell(11, 1, 'verifyLogoutFunction')
+data.setCell(11, 2, 'testScript.Log_Out')
+data.setCell(11, 3, 725);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'verifyUserLoginWithInvalidUsernameAndValidPassword')
+data.setCell(12, 1, 'loginUsingValidCredentials')
 data.setCell(12, 2, 'testScript.Login_Test')
-data.setCell(12, 3, 358);
+data.setCell(12, 3, 518);
 data.setCell(13, 0, 13)
 data.setCell(13, 1, 'verifyLoginWithInvalidCredentials')
 data.setCell(13, 2, 'testScript.Login_Test')
-data.setCell(13, 3, 285);
+data.setCell(13, 3, 356);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'loginUsingValidUsernameAndInvalidPassword')
+data.setCell(14, 1, 'verifyUserLoginWithInvalidUsernameAndValidPassword')
 data.setCell(14, 2, 'testScript.Login_Test')
-data.setCell(14, 3, 273);
+data.setCell(14, 3, 340);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'verifyLoginWithInvalidCredentials')
+data.setCell(15, 2, 'testScript.Login_Test')
+data.setCell(15, 3, 325);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'loginUsingValidUsernameAndInvalidPassword')
+data.setCell(16, 2, 'testScript.Login_Test')
+data.setCell(16, 3, 285);
 window.suiteTableData['myTestSuite']= { tableData: data, tableDiv: 'times-div-myTestSuite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 20 seconds</span>
+              <span class="suite-total-time">Total running time: 19 seconds</span>
               <div id="times-div-myTestSuite">
               </div> <!-- times-div-myTestSuite -->
             </div> <!-- times-div -->
@@ -528,197 +627,221 @@ return data;
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginUsingValidCredentials</span>
-                <span class="method-start">1141 ms</span>
+                <span class="method-start">1978 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=loginUsingValidCredentials status=SUCCESS method=Login_Test.loginUsingValidCredenti...)</span>
-                <span class="method-start">1718 ms</span>
+                <span class="method-start">2523 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowserMethod(Chrome)</span>
-                <span class="method-start">1797 ms</span>
+                <span class="method-start">2607 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginUsingValidCredentialsFromExcelsheet</span>
-                <span class="method-start">2794 ms</span>
+                <span class="method-start">3644 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=loginUsingValidCredentialsFromExcelsheet status=SUCCESS method=Login_Test.loginUsin...)</span>
-                <span class="method-start">3627 ms</span>
+                <span class="method-start">4458 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowserMethod(Chrome)</span>
-                <span class="method-start">3699 ms</span>
+                <span class="method-start">4532 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">loginUsingValidUsernameAndInvalidPassword</span>
-                <span class="method-start">4582 ms</span>
+                <span class="method-start">5618 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=loginUsingValidUsernameAndInvalidPassword status=SUCCESS method=Login_Test.loginUsi...)</span>
-                <span class="method-start">4856 ms</span>
+                <span class="method-start">5904 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowserMethod(Chrome)</span>
-                <span class="method-start">4930 ms</span>
+                <span class="method-start">5983 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLoginWithInvalidCredentials(adim123, admintest)</span>
-                <span class="method-start">5761 ms</span>
+                <span class="method-start">7166 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=verifyLoginWithInvalidCredentials status=SUCCESS method=Login_Test.verifyLoginWithI...)</span>
-                <span class="method-start">6141 ms</span>
+                <span class="method-start">7524 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowserMethod(Chrome)</span>
-                <span class="method-start">6214 ms</span>
+                <span class="method-start">7597 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLoginWithInvalidCredentials(testuser, testpassword)</span>
-                <span class="method-start">7555 ms</span>
+                <span class="method-start">9024 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=verifyLoginWithInvalidCredentials status=SUCCESS method=Login_Test.verifyLoginWithI...)</span>
-                <span class="method-start">7840 ms</span>
+                <span class="method-start">9350 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowserMethod(Chrome)</span>
-                <span class="method-start">7911 ms</span>
+                <span class="method-start">9425 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUserLoginWithInvalidUsernameAndValidPassword</span>
-                <span class="method-start">9339 ms</span>
+                <span class="method-start">10359 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=verifyUserLoginWithInvalidUsernameAndValidPassword status=SUCCESS method=Login_Test...)</span>
-                <span class="method-start">9697 ms</span>
+                <span class="method-start">10701 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScript.SubCategory_Test</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowserMethod(Chrome)</span>
-                <span class="method-start">9769 ms</span>
+                <span class="method-start">10777 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAddingNewSubcategoryWithValidDetails</span>
-                <span class="method-start">11217 ms</span>
+                <span class="method-start">11682 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=verifyAddingNewSubcategoryWithValidDetails status=SUCCESS method=SubCategory_Test.v...)</span>
-                <span class="method-start">13807 ms</span>
+                <span class="method-start">13306 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowserMethod(Chrome)</span>
-                <span class="method-start">13877 ms</span>
+                <span class="method-start">13379 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyEditingASubcategoryAdded</span>
-                <span class="method-start">14739 ms</span>
+                <span class="method-start">14765 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=verifyEditingASubcategoryAdded status=SUCCESS method=SubCategory_Test.verifyEditing...)</span>
-                <span class="method-start">16984 ms</span>
+                <span class="method-start">17240 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowserMethod(Chrome)</span>
-                <span class="method-start">17055 ms</span>
+                <span class="method-start">17314 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifySearchingExistingSubcategoryFromTheList</span>
-                <span class="method-start">18057 ms</span>
+                <span class="method-start">18517 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverQuitMethod([TestResult name=verifySearchingExistingSubcategoryFromTheList status=SKIP method=SubCategory_Test.v...)</span>
+                <span class="method-start">20085 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowserMethod(Chrome)</span>
+                <span class="method-start">20158 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchingExistingSubcategoryFromTheList</span>
+                <span class="method-start">21191 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">driverQuitMethod([TestResult name=verifySearchingExistingSubcategoryFromTheList status=SKIP method=SubCategory_Test.v...)</span>
+                <span class="method-start">22730 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeBrowserMethod(Chrome)</span>
+                <span class="method-start">22804 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">verifySearchingExistingSubcategoryFromTheList</span>
+                <span class="method-start">23736 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=verifySearchingExistingSubcategoryFromTheList status=SUCCESS method=SubCategory_Tes...)</span>
-                <span class="method-start">19438 ms</span>
+                <span class="method-start">25268 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScript.ManageFooterText_Test</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowserMethod(Chrome)</span>
-                <span class="method-start">19509 ms</span>
+                <span class="method-start">25341 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyUpdatingManageFooterText</span>
-                <span class="method-start">20957 ms</span>
+                <span class="method-start">26432 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=verifyUpdatingManageFooterText status=SUCCESS method=ManageFooterText_Test.verifyUp...)</span>
-                <span class="method-start">23544 ms</span>
+                <span class="method-start">27872 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScript.ManageContact_Test</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowserMethod(Chrome)</span>
-                <span class="method-start">23614 ms</span>
+                <span class="method-start">27946 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyEditingExistingContact</span>
-                <span class="method-start">24607 ms</span>
+                <span class="method-start">28859 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=verifyEditingExistingContact status=SUCCESS method=ManageContact_Test.verifyEditing...)</span>
-                <span class="method-start">27006 ms</span>
+                <span class="method-start">30922 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScript.ManageCategory_Test</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowserMethod(Chrome)</span>
-                <span class="method-start">27074 ms</span>
+                <span class="method-start">30995 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAddingAnewCategory</span>
-                <span class="method-start">28065 ms</span>
+                <span class="method-start">32093 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=verifyAddingAnewCategory status=SUCCESS method=ManageCategory_Test.verifyAddingAnew...)</span>
-                <span class="method-start">30605 ms</span>
+                <span class="method-start">33720 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowserMethod(Chrome)</span>
-                <span class="method-start">30677 ms</span>
+                <span class="method-start">33793 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyDeletingACategoryAdded</span>
-                <span class="method-start">31563 ms</span>
+                <span class="method-start">34666 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=verifyDeletingACategoryAdded status=SUCCESS method=ManageCategory_Test.verifyDeleti...)</span>
-                <span class="method-start">32673 ms</span>
+                <span class="method-start">35769 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScript.Admin_Users</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowserMethod(Chrome)</span>
-                <span class="method-start">32741 ms</span>
+                <span class="method-start">35842 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyAddingNewUserWithValidDetails</span>
-                <span class="method-start">33590 ms</span>
+                <span class="method-start">36756 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=verifyAddingNewUserWithValidDetails status=SUCCESS method=Admin_Users.verifyAddingN...)</span>
-                <span class="method-start">35173 ms</span>
+                <span class="method-start">38131 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testScript.Log_Out</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeBrowserMethod(Chrome)</span>
-                <span class="method-start">35243 ms</span>
+                <span class="method-start">38202 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">verifyLogoutFunction</span>
-                <span class="method-start">36397 ms</span>
+                <span class="method-start">39498 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">driverQuitMethod([TestResult name=verifyLogoutFunction status=SUCCESS method=Log_Out.verifyLogoutFunction()[pri:0, in...)</span>
-                <span class="method-start">37638 ms</span>
+                <span class="method-start">40224 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -66,7 +66,6 @@ public class Listeners extends BaseClass implements ITestListener { //right clic
 	public void onTestSkipped(ITestResult result) {
 		ITestListener.super.onTestSkipped(result);
 		extentTest.get().log(Status.SKIP, "Test Skipped");
-		// String testMethodName = result.getMethod().getMethodName();
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {

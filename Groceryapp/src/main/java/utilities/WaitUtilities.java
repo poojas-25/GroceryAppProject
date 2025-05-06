@@ -32,19 +32,20 @@ public class WaitUtilities {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(explicitwaitDuration));
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	
+
 	public void waitForWebElementToBeClickable(WebDriver driver, WebElement element) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(explicitwaitDuration));
 		wait.until(ExpectedConditions.elementToBeClickable(element));
 	}
-	
-	public void waitForWebElementHasAttributeWithSpecificValue(WebDriver driver, WebElement element, String attribute, String value) {
+
+	public void waitForWebElementHasAttributeWithSpecificValue(WebDriver driver, WebElement element, String attribute,
+			String value) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(explicitwaitDuration));
 		wait.until(ExpectedConditions.attributeContains(element, attribute, value));
 	}
-	
+
 	public void implicitWait(WebDriver driver) {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitwaitDuration));
 	}
-	
+
 }

@@ -5,7 +5,7 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 
 public class ExtentReportUtility {
 
-	public static final ExtentReports extentReports = new ExtentReports();   //creating object for ExtentReports class
+	public static final ExtentReports extentReports = new ExtentReports();   //creating instance for ExtentReports class
 	public synchronized static ExtentReports createExtentReports() {    //synchronized is used for ensuring thread safety 
 
 		ExtentSparkReporter reporter = new ExtentSparkReporter("./extent-reports/extent-report.html"); //ExtentSparkReporter class handles the creation and config of a html report.Path of the folder of the report in html format
